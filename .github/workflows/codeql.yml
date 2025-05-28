@@ -87,9 +87,9 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        ./configure --with-openssl [--with-gnutls --with-wolfssl]
+        autoreconf -fi
+        ./configure --with-openssl
         make
-
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
