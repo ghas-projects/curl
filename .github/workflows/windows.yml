@@ -436,7 +436,7 @@ jobs:
             tflags: 'skiprun'
       fail-fast: false
     steps:
-      - uses: msys2/setup-msys2@d44ca8e88d8b43d56cf5670f91747359d5537f97 # v2
+      - uses: msys2/setup-msys2@61f9e5e925871ba6c9e3e8da24ede83ea27fa91f # v2
         with:
           msystem: ${{ matrix.dir }}
           release: false
@@ -816,7 +816,7 @@ jobs:
 
       fail-fast: false
     steps:
-      - uses: msys2/setup-msys2@d44ca8e88d8b43d56cf5670f91747359d5537f97 # v2
+      - uses: msys2/setup-msys2@61f9e5e925871ba6c9e3e8da24ede83ea27fa91f # v2
         with:
           msystem: ucrt64
           release: ${{ contains(matrix.image, 'arm') }}
