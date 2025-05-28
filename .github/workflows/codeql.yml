@@ -90,7 +90,7 @@ jobs:
         sudo apt-get update && sudo apt-get install -y libpsl-dev
         autoreconf -fi
         ./configure --with-openssl
-        make
+        make -j$(nproc)
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
