@@ -91,7 +91,7 @@ jobs:
         autoreconf -fi
         ./configure --with-openssl
         make
-        make install
+        sudo make install
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
